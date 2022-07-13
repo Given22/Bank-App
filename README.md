@@ -11,7 +11,7 @@
   
 ## Live
 
-  https://github.com/Given22/Bank-App
+  https://bank-damian-s.netlify.app
 
 ## Technologies
   
