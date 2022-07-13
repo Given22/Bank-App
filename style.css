@@ -83,6 +83,14 @@ nav {
   color: #777;
 }
 
+.login__accounts{
+  position: absolute;
+  font-size: 3rem;
+  top: 50%;
+  text-align: center;
+  width: 96%;
+}
+
 /* MAIN */
 .app {
   position: relative;

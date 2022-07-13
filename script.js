@@ -68,6 +68,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const login__accounts = document.querySelector('.login__accounts')
 
 //______Functions
 
@@ -149,10 +150,7 @@ const displayMovements = function (movements,currency,movD, sort = false) {
   
     const a = dateFormatter(date, optionsDate)
 
-
     const d = passed === 0 ? `Today`: passed === 1? 'Yesterday': passed <= 7 ? `${passed} days ago` : `${a}`
-    
-
     
     const optionsNumber = {
       style: 'currency',
@@ -199,8 +197,6 @@ const calcDisplayBalance = function (movements,currency) {
     currency: currency
   }
   let balance = user.balance
-  
-  console.log(balance)
   
   balance = numberFormatter(balance, optionsNumber)
   labelBalance.textContent = `${balance}`
@@ -278,6 +274,7 @@ const takeLoan = function (user, amount){
 //______Log in
 
 const login = function(user) {
+  login__accounts.style.display = 'none'
   containerApp.style.display = 'grid'
   setTimeout(() => containerApp.style.opacity = 100,30)
   
@@ -303,6 +300,7 @@ let sorted = true
 //______Log Out
 const logOut = function(user) {
   setTimeout(() => containerApp.style.display = 'none',3000)
+  login__accounts.style.display = 'inline'
   containerApp.style.opacity = 0
 }
 
